@@ -32,7 +32,7 @@ spec:
           value: user-db:27017
         securityContext:
           runAsNonRoot: true
-          runAsUser: 10001
+          runAsUser: 1000590000
           capabilities:
             drop:
               - all
