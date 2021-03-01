@@ -24,6 +24,8 @@ spec:
           containerPort: 27017
         securityContext:
           capabilities:
+            runAsNonRoot: true
+            runAsUser: 1000590000
             drop:
               - all
             add:

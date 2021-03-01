@@ -22,6 +22,8 @@ spec:
         - name: mongo
           containerPort: 27017
         securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000590000
           capabilities:
             drop:
               - all

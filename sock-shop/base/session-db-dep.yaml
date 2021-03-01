@@ -24,6 +24,8 @@ spec:
         - name: redis
           containerPort: 6379
         securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000590000
           capabilities:
             drop:
               - all

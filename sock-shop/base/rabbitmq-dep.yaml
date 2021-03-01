@@ -26,6 +26,8 @@ spec:
         - containerPort: 5672
           name: rabbitmq
         securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000590000
           capabilities:
             drop:
               - all
