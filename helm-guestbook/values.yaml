@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: ibmcom/guestbook:v1
+  repository: gcr.io/heptio-images/ks-guestbook-demo
   tag: 0.1
   pullPolicy: IfNotPresent
 
