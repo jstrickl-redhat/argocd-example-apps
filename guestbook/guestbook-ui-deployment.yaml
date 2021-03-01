@@ -17,4 +17,4 @@ spec:
       - image: siamaksade/guestbook-centos:latest
         name: guestbook-ui
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
