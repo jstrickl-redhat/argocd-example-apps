@@ -7,11 +7,11 @@
     // Component-level parameters, defined initially from 'ks prototype use ...'
     // Each object below should correspond to a component in the components/ directory
     "guestbook-ui": {
-      containerPort: 80,
+      containerPort: 8080,
       image: "gcr.io/heptio-images/ks-guestbook-demo:0.2",
       name: "ks-guestbook-ui",
       replicas: 1,
-      servicePort: 80,
+      servicePort: 8080,
       type: "LoadBalancer",
     },
   },
