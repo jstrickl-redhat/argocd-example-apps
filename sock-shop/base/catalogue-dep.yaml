@@ -26,7 +26,7 @@ spec:
             cpu: 100m
             memory: 100Mi
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         securityContext:
           runAsNonRoot: true
           runAsUser: 10001
@@ -39,13 +39,13 @@ spec:
         livenessProbe:
           httpGet:
             path: /health
-            port: 80
+            port: 8080
           initialDelaySeconds: 300
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /health
-            port: 80
+            port: 8080
           initialDelaySeconds: 180
           periodSeconds: 3
       nodeSelector:
