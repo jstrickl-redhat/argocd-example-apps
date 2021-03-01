@@ -1,0 +1,31 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: helm-guestbook
+  namespace: helm-guestbook
+  labels:
+    app: helm-guestbook
+    app.kubernetes.io/instance: helm-guestbook
+    chart: helm-guestbook-0.1.0
+    heritage: Tiller
+    release: helm-guestbook
+spec:
+  host: helm-guestbook-helm-guestbook.apps.cluster-b8c7.b8c7.sandbox1212.opentlc.com
+  to:
+    kind: Service
+    name: helm-guestbook
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
+status:
+  ingress:
+    - host: >-
+        helm-guestbook-helm-guestbook.apps.cluster-b8c7.b8c7.sandbox1212.opentlc.com
+      routerName: default
+      conditions:
+        - type: Admitted
+          status: 'True'
+          lastTransitionTime: '2021-03-01T03:48:49Z'
+      wildcardPolicy: None
+      routerCanonicalHostname: apps.cluster-b8c7.b8c7.sandbox1212.opentlc.com
