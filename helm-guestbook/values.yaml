@@ -5,8 +5,8 @@
 replicaCount: 2
 
 image:
-  repository: siamaksade/guestbook-centos/
-  tag: 0.1
+  repository: siamaksade/guestbook-centos
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
